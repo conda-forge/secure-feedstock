@@ -17,10 +17,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
-    - setuptools
+    - python >=3.10
+    - setuptools >=42
+    - wheel
   run:
-    - python >=3.6
+    - python >=3.10
 
 test:
   imports:
