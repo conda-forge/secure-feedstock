@@ -1,5 +1,5 @@
 {% set name = "secure" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/secure-{{ version }}.tar.gz
-  sha256: f9bf274681bc22b8b37df0ee8985d9972ee96409899d60560d373aa39c43b23c
+  sha256: 942c10b8cfbde9e3a7961cf17833c9139d6e14ee39d23428230e4b8c8bc2de26
 
 build:
   noarch: python
@@ -17,10 +17,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
-    - setuptools
+    - python >=3.10
+    - setuptools >=42
+    - wheel
   run:
-    - python >=3.6
+    - python >=3.10
 
 test:
   imports:
