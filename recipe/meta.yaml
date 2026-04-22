@@ -1,6 +1,6 @@
-{% set python_min = '3.10' %}
+{% set python_min = "3.10" %}
 {% set name = "secure" %}
-{% set version = "1.0.1" %}
+{% set version = "2.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/secure-{{ version }}.tar.gz
-  sha256: 942c10b8cfbde9e3a7961cf17833c9139d6e14ee39d23428230e4b8c8bc2de26
+  sha256: bb492b9ca2ae66d04f4718675a18de1d1a29217aaded3d6cb5bd8b4ba2e2a645
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
