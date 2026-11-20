@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: secure
-  version: "2.0.1"
+  version: "2.0.2"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/secure-${{ version }}.tar.gz
-  sha256: bb492b9ca2ae66d04f4718675a18de1d1a29217aaded3d6cb5bd8b4ba2e2a645
+  sha256: d6f242bfd9e56a7b279aed0554b80f1b1558559e20ec707cc71dc50de9835a50
 
 build:
   number: 0
@@ -21,8 +21,8 @@ requirements:
   host:
     - pip
     - python ${{ python_min }}.*
-    - setuptools >=77
-    - wheel
+    - wheel >=0.48.0
+    - setuptools >=84.2.1
   run:
     - python >=${{ python_min }}
 
