@@ -21,8 +21,8 @@ requirements:
   host:
     - pip
     - python ${{ python_min }}.*
-    - setuptools >=77
-    - wheel
+    - wheel >=0.48.0
+    - setuptools >=84.2.1
   run:
     - python >=${{ python_min }}
 
